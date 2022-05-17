@@ -8,8 +8,14 @@
         <small>Slug: {{slug}}</small>
         <br>
         <small>Criado em: {{date}}</small>
+        <br>
+        <a href="/admin/categorias/edit/{{_id}}"><button class="btn btn-success mt-3">Editar</button></a>
+        <form action="/admin/categoarias/delete" method="post">
+            <input type="hidden" name="id" value="{{_id}}">
+            <button type="submit" class="btn btn-danger mt-2">Deletar</button>
+        </form>
     </div>
 </div>
 {{else}}
-
+<h4 class="mt-4">Nenhuma Categoria Registrada!</h4>
 {{/each}}
